@@ -4,21 +4,248 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Mangan</title>
   <link 
     rel="stylesheet" 
     href="frontend/libraries/bootstrap/css/bootstrap.css"
 	>
+
+  <!-- My fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link 
     href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
     rel="stylesheet"
   >
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- End of my fonts -->
+
+  <link href="frontend/libraries/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="frontend/styles/main.css">
 </head>
 <body>
 
-	
+	<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mangan</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link btn btn-outline-primary tombol mr-2 px-3 mt-2" href="#">Masuk</a>
+          <a class="nav-item nav-link btn btn-primary text-white tombol mr-2 px-3 mt-2" href="#">Daftar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+
+  <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Mangan</h1>
+      <p class="lead">Temukan makanan & minuman terbaik di Manado</p>
+      <div class="row justify-content-center">
+        <form class="form-inline">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-info my-2 my-sm-0" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>    
+    </div>
+  </div>
+  <!-- End of jumbotron -->
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Main -->
+    <div class="row">
+      <div class="col-sm-6 menu mt-3">
+        <div class="card shadow h-scale">
+          <img src="frontend/images/1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pergi Makan</h5>
+            <p class="card-text">Lihat tempat makan terbaik untuk Anda</p>
+            <a href="makan" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 menu mt-3">
+        <div class="card shadow h-scale">
+          <img src="frontend/images/2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Nightlife Restoran</h5>
+            <p class="card-text">Jelajahi gerai nightlife terbaik di kota Anda</p>
+            <a href="nightlife" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of main -->
+
+    <!-- Favorit -->
+    <section class="favorit py-5">
+      <div class="row justify-content-center mt-4">
+        <h2>Restoran favorit di <span>Manado</span></h2>
+      </div>
+      <div class="row mt-3">
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Pertama</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Kedua</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Ketiga</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Keempat</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Kelima</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Keenam</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Ketujuh</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Kedelapan</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Kesembilan</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Kesepuluh</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Kesebelas</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Kedua Belas</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Ketiga Belas</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Keempat Belas</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="card shadow h-scale">
+            <div class="card-body">
+              <h5 class="float-left">Restoran Kelima Belas</h5>
+              <i class="fas fa-angle-right mt-2 float-right"></i>
+              <a href="nightlife" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of favorit-->
+
+  </div>
+  <!-- End of container -->
+
+  <!-- Footer -->
+  <footer class="sticky-footer bg-white py-3">
+    <div class="container-fluid">
+      <div class="row border-top justify-content-center align-items-center pt-3" >
+        <div class="col-auto text-gray-500 font-weight-light copyright">
+          Copyright © 2021 • Mangan • All rights reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End of footer -->
 
   <script src="frontend/libraries/jquery/jquery-3.5.1.min.js"></script>
   <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>

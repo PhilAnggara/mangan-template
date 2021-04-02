@@ -1,0 +1,148 @@
+// Navbar
+.navbar-brand {
+  font-family: 'Viga';
+  font-size: 32px;
+}
+
+// Jumbotron
+.jumbotron {
+  background-image: url(/frontend/images/jumbotron-bg.jpg);
+  background-size: cover;
+  height: 350px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+  form {
+    input {
+      width: 250px !important;
+    }
+  }
+
+  .display-4 {
+    font-family: 'Lobster';
+    color: white;
+    margin-top: 30px;
+    font-size: 60px;
+  }
+  .lead {
+    font-family: 'Assistant';
+    color: white;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  // ::after {
+  //   content: '';
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 0, 0, 0.1);
+  //   position: absolute;
+  //   bottom: 0;
+  // }
+}
+
+// Container
+.menu {
+  border-radius: 120px;
+  font-family: 'Assistant';
+
+  h5 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  img {
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+.favorit {
+  h2 {
+    font-size: 24px;
+    font-weight: 400;
+    span {
+      font-weight: 500;
+    }
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+// Footer
+footer {
+  font-family: 'Assistant';
+}
+
+// Animation
+
+.h-scale {
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+.h-scale:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+
+
+// DESKTOP VERSION
+@media (min-width: 992px) {
+
+  .navbar-brand {
+    color: white !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+  }
+
+  .tombol {
+    text-transform: uppercase;
+    border-radius: 40px;
+    color: white !important;
+  }
+
+  .jumbotron {
+    margin-top: -75px;
+    height: 420px;
+
+    form {
+      input {
+        width: 500px !important;
+        height: 45px;
+      }
+      button {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .display-4 {
+      font-size: 80px;
+    }
+    .lead {
+      font-size: 35px;
+    }
+  }
+
+  .favorit {
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+}

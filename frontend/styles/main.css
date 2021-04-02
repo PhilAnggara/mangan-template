@@ -1,1 +1,115 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.navbar-brand {
+  font-family: "Viga";
+  font-size: 32px;
+}
+
+.jumbotron {
+  background-image: url(/frontend/images/jumbotron-bg.jpg);
+  background-size: cover;
+  height: 350px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.jumbotron form input {
+  width: 250px !important;
+}
+.jumbotron .display-4 {
+  font-family: "Lobster";
+  color: white;
+  margin-top: 30px;
+  font-size: 60px;
+}
+.jumbotron .lead {
+  font-family: "Assistant";
+  color: white;
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.menu {
+  border-radius: 120px;
+  font-family: "Assistant";
+}
+.menu h5 {
+  font-weight: 600;
+  font-size: 22px;
+}
+.menu p {
+  font-weight: 300;
+  font-size: 18px;
+}
+.menu img {
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.favorit h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.favorit h2 span {
+  font-weight: 500;
+}
+.favorit h5 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+footer {
+  font-family: "Assistant";
+}
+
+.h-scale {
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow;
+}
+
+.h-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    color: white !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+  }
+
+  .tombol {
+    text-transform: uppercase;
+    border-radius: 40px;
+    color: white !important;
+  }
+
+  .jumbotron {
+    margin-top: -75px;
+    height: 420px;
+  }
+  .jumbotron form input {
+    width: 500px !important;
+    height: 45px;
+  }
+  .jumbotron form button {
+    width: 45px;
+    height: 45px;
+  }
+  .jumbotron .display-4 {
+    font-size: 80px;
+  }
+  .jumbotron .lead {
+    font-size: 35px;
+  }
+
+  .favorit h2 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .favorit h2 span {
+    font-weight: 500;
+  }
+}/*# sourceMappingURL=main.css.map */

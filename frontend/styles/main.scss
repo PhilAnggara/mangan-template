@@ -80,6 +80,9 @@
 // Footer
 footer {
   font-family: 'Assistant';
+  .copyright {
+    font-size: 12px;
+  }
 }
 
 // Animation
@@ -142,6 +145,12 @@ footer {
       span {
         font-weight: 500;
       }
+    }
+  }
+
+  footer {
+    .copyright {
+      font-size: 16px;
     }
   }
 

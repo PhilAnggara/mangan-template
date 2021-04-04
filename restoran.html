@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="frontend/images/icon.png">
+  <title>Restoran - Mangan</title>
+  <link 
+    rel="stylesheet" 
+    href="frontend/libraries/bootstrap/css/bootstrap.css"
+	>
+  <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css">
+
+  <!-- My fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+    rel="stylesheet"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- End of my fonts -->
+
+  <link href="frontend/libraries/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="frontend/styles/main.css">
+</head>
+<body>
+
+	<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand navbar-alternate" href="#">Mangan</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <form class="form-inline nav-search">
+          <input class="form-control ml-sm-5" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-info my-2 my-sm-0" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>        
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link mr-4" href="#">Masuk</a>
+          <a class="nav-link" href="#">Daftar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Gallery -->
+    <div class="gallery mt-3">
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="xzoom-container">
+            <img src="frontend/images/restaurant-1.jpg" class="xzoom"
+            id="xzoom-default" xoriginal="frontend/images/restaurant-1.jpg">
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="xzoom-thumbs">
+            <a href="frontend/images/restaurant-1.jpg">
+              <img src="frontend/images/restaurant-1.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant-1.jpg">
+            </a>
+            <a href="frontend/images/restaurant-4.jpg">
+              <img src="frontend/images/restaurant-4.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant-4.jpg">
+            </a>
+            <a href="frontend/images/restaurant-7.jpg">
+              <img src="frontend/images/restaurant-7.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant-7.jpg">
+            </a>
+            <a href="frontend/images/restaurant-2.jpg">
+              <img src="frontend/images/restaurant-2.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant-2.jpg">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of gallery -->
+    
+    <!-- Restaurant -->
+    <section class="restaurant">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2>Warung Bunda & Bar</h2>
+        </div>
+        
+        <!-- Rating -->
+        <div class="col-sm-4">
+          <div class="ratings text-center-sm">
+            <span>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star"></i>
+            </span>
+            <span class="product-rating ml-1">4.6</span>
+            <span>/5</span>
+            <div>
+              <p><i class="border-bottom ml-1">135 Ulasan</i></p>
+            </div>
+          </div>
+      </div>
+        <!-- End of rating -->
+      </div>
+
+      <!-- Aksi -->
+      <div class="aksi mt-3 mb-4">
+        <button class="btn btn-info my-2 my-sm-0 mr-1" type="button" data-toggle="modal" data-target="#staticBackdrop">
+          <i class="far fa-star"></i>
+          Tambah Ulasan
+        </button>
+
+        <!-- Modal rating-->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Tambah ulasan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>                  
+                  <div class="form-group text-center" id="rating-ability-wrapper">
+                    <label class="control-label" for="rating">
+                    <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+                    </label>
+                    <h2 class="bold rating-header" style="margin-top: -35px;">
+                      <span class="selected-rating">0</span><small> / 5</small>
+                    </h2>
+                    <button type="button" class="btnrating btn btn-default btn-lg rounded-pill" data-attr="1" id="rating-star-1">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btnrating btn btn-default btn-lg rounded-pill" data-attr="2" id="rating-star-2">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btnrating btn btn-default btn-lg rounded-pill" data-attr="3" id="rating-star-3">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btnrating btn btn-default btn-lg rounded-pill" data-attr="4" id="rating-star-4">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btnrating btn btn-default btn-lg rounded-pill" data-attr="5" id="rating-star-5">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Ulasan anda" id="ulasan" rows="2"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+                <button type="button" class="btn btn-primary">Kirim</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of modal rating -->
+
+
+        <button class="btn btn-outline-info my-2 my-sm-0 mr-1" type="submit">
+          <i class="fas fa-directions"></i>
+          Petunjuk
+        </button>
+        <button class="btn btn-outline-info my-2 my-sm-0 mr-1" type="submit">
+          <i class="fas fa-bookmark"></i>
+          Arsip
+        </button>
+        <button class="btn btn-outline-info my-2 my-sm-0 mr-1" type="submit">
+          <i class="fas fa-share"></i>
+          Bagi
+        </button>
+      </div>
+      <!-- End of aksi -->
+
+      <!-- Content -->
+      <div class="row">
+        <div class="col-sm-8 mb-2">
+          <div class="card">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Sekilas</a>
+                <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ulasan</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Tentang restoran ini</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, dicta! Facilis est dignissimos omnis adipisci laboriosam, veniam sapiente suscipit eveniet quidem alias consectetur quaerat minus nobis quasi necessitatibus expedita culpa similique labore ipsa fugit deleniti aut quibusdam animi. Molestiae velit distinctio perferendis impedit dolores totam rerum, nobis sint veritatis, eos doloribus nulla. Repellendus reprehenderit molestiae tempore facilis illum soluta, voluptatem optio hic, modi veritatis eos commodi iste nisi dolor delectus totam praesentium id eligendi asperiores! Doloremque dignissimos voluptate aut incidunt! Veritatis, tempora! Sapiente vero error amet corporis! Suscipit, aperiam exercitationem? Maxime iure quo voluptatum consectetur veritatis praesentium, cum vero laudantium.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="card">
+                  <div class="card-body">
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Lokasi</h5>
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d216.49527671888438!2d124.87181537920299!3d1.5024075607393188!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870ba153402383%3A0x535f96b750c52565!2sWarung%20BUNDA!5e1!3m2!1sid!2sid!4v1617549909316!5m2!1sid!2sid"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of content -->
+    </section>
+    <!-- End of restaurant -->
+
+  </div>
+  <!-- End of container -->
+
+  <!-- Footer -->
+  <footer class="sticky-footer bg-white py-3">
+    <div class="container-fluid">
+      <div class="row border-top justify-content-center align-items-center pt-3" >
+        <div class="col-auto text-gray-500 font-weight-light copyright">
+          Copyright © 2021 • Mangan • All rights reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End of footer -->
+
+  <script src="frontend/libraries/jquery/jquery-3.5.1.min.js"></script>
+  <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+  <script src="frontend/libraries/retina/retina.min.js"></script>
+  <script src="frontend/libraries/xzoom/xzoom.min.js"></script>
+  <script src="frontend/scripts/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.xzoom, .xzoom-gallery').xzoom({
+        zoomwidth: 500,
+        title: false,
+        tint: '#333',
+        xoffest: 15,
+      });
+    });
+  </script>
+</body>
+</html>

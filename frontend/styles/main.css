@@ -108,6 +108,9 @@ footer .copyright {
 .restaurant button, .restaurant a {
   font-size: 10px;
 }
+.restaurant .nav-link {
+  font-size: 16px;
+}
 .restaurant .ratings .product-rating {
   font-size: 20px;
 }

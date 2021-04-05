@@ -121,7 +121,7 @@ footer {
     font-size: 24px;
     font-weight: 400;
   }
-  button {
+  button, a {
     font-size: 10px;
   }
   .ratings {
@@ -131,6 +131,46 @@ footer {
      .checked {
        color: orange;
      }
+  }
+
+  .salin-link {
+    width: 270px;
+  }
+  .salin {
+    width: 38px;
+    height: 38px;
+  }
+  .pad-50 {
+    padding: 40px 0px 40px 0px;
+  }
+
+  .bot-left {
+    bottom: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    z-index: 10000;
+  }
+
+  .ulasan {
+    img {
+      width: 35px;
+    }
+    h3 {
+      font-size: 16px;
+      margin-bottom: -5px;
+    }
+    span {
+      font-size: 10px;
+      color: #a1a1a1;
+      i {
+        font-size: 10px;
+      }
+    }
+    p {
+      font-size: 12px;
+      color: #444444;
+    }
   }
 }
 
@@ -228,7 +268,7 @@ footer {
       font-size: 34px;
       font-weight: 400;
     }
-    button {
+    button, a {
       font-size: 14px;
     }
 
@@ -239,6 +279,27 @@ footer {
       .product-rating {
         font-size: 30px
        }
+    }
+    .salin-link {
+      width: 400px;
+    }
+    .ulasan {
+      img {
+        width: 50px;
+      }
+      h3 {
+        font-size: 16px;
+        margin-bottom: -1px;
+      }
+      span {
+        font-size: 12px;
+        i {
+          font-size: 12px;
+        }
+      }
+      p {
+        font-size: 14px;
+      }
     }
   }
 

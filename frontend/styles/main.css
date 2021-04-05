@@ -105,7 +105,7 @@ footer .copyright {
   font-size: 24px;
   font-weight: 400;
 }
-.restaurant button {
+.restaurant button, .restaurant a {
   font-size: 10px;
 }
 .restaurant .ratings .product-rating {
@@ -113,6 +113,41 @@ footer .copyright {
 }
 .restaurant .ratings .checked {
   color: orange;
+}
+.restaurant .salin-link {
+  width: 270px;
+}
+.restaurant .salin {
+  width: 38px;
+  height: 38px;
+}
+.restaurant .pad-50 {
+  padding: 40px 0px 40px 0px;
+}
+.restaurant .bot-left {
+  bottom: 0;
+  left: 0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  z-index: 10000;
+}
+.restaurant .ulasan img {
+  width: 35px;
+}
+.restaurant .ulasan h3 {
+  font-size: 16px;
+  margin-bottom: -5px;
+}
+.restaurant .ulasan span {
+  font-size: 10px;
+  color: #a1a1a1;
+}
+.restaurant .ulasan span i {
+  font-size: 10px;
+}
+.restaurant .ulasan p {
+  font-size: 12px;
+  color: #444444;
 }
 
 @media (min-width: 992px) {
@@ -184,7 +219,7 @@ footer .copyright {
     font-size: 34px;
     font-weight: 400;
   }
-  .restaurant button {
+  .restaurant button, .restaurant a {
     font-size: 14px;
   }
   .restaurant .nav-link {
@@ -192,5 +227,24 @@ footer .copyright {
   }
   .restaurant .ratings .product-rating {
     font-size: 30px;
+  }
+  .restaurant .salin-link {
+    width: 400px;
+  }
+  .restaurant .ulasan img {
+    width: 50px;
+  }
+  .restaurant .ulasan h3 {
+    font-size: 16px;
+    margin-bottom: -1px;
+  }
+  .restaurant .ulasan span {
+    font-size: 12px;
+  }
+  .restaurant .ulasan span i {
+    font-size: 12px;
+  }
+  .restaurant .ulasan p {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=main.css.map */

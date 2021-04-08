@@ -4,25 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="frontend/images/icon.png">
+  <link rel="shortcut icon" href="frontend/images/favicon.png">
   <title>Restoran - Mangan</title>
-  <link 
-    rel="stylesheet" 
-    href="frontend/libraries/bootstrap/css/bootstrap.css"
-	>
+  <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css">
 
   <!-- My fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <!-- End of my fonts -->
 
-  <link href="frontend/libraries/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="frontend/libraries/fontawesome-free/css/all.min.css" type="text/css">
   <link rel="stylesheet" href="frontend/styles/main.css">
 </head>
 <body>
@@ -58,23 +52,23 @@
       <div class="row">
         <div class="col-sm-7">
           <div class="xzoom-container">
-            <img src="frontend/images/restaurant-1.jpg" class="xzoom"
+            <img src="frontend/images/restaurant1.jpg" class="xzoom"
             id="xzoom-default" xoriginal="frontend/images/restaurant-1.jpg">
           </div>
         </div>
         <div class="col-sm-5">
           <div class="xzoom-thumbs">
             <a href="frontend/images/restaurant-1.jpg">
-              <img src="frontend/images/restaurant-1.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant-1.jpg">
-            </a>
-            <a href="frontend/images/restaurant-4.jpg">
-              <img src="frontend/images/restaurant-4.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant-4.jpg">
-            </a>
-            <a href="frontend/images/restaurant-7.jpg">
-              <img src="frontend/images/restaurant-7.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant-7.jpg">
+              <img src="frontend/images/restaurant1.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant1.jpg">
             </a>
             <a href="frontend/images/restaurant-2.jpg">
-              <img src="frontend/images/restaurant-2.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant-2.jpg">
+              <img src="frontend/images/restaurant2.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant2.jpg">
+            </a>
+            <a href="frontend/images/restaurant-3.jpg">
+              <img src="frontend/images/restaurant3.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant3.jpg">
+            </a>
+            <a href="frontend/images/restaurant-4.jpg">
+              <img src="frontend/images/restaurant4.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant4.jpg">
             </a>
           </div>
         </div>
@@ -234,7 +228,7 @@
                 <!-- Tentang -->
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">Tentang restoran ini</h5>
+                    <h5 class="card-title mb-4">Tentang restoran ini</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, dicta! Facilis est dignissimos omnis adipisci laboriosam, veniam sapiente suscipit eveniet quidem alias consectetur quaerat minus nobis quasi necessitatibus expedita culpa similique labore ipsa fugit deleniti aut quibusdam animi. Molestiae velit distinctio perferendis impedit dolores totam rerum, nobis sint veritatis, eos doloribus nulla. Repellendus reprehenderit molestiae tempore facilis illum soluta, voluptatem optio hic, modi veritatis eos commodi iste nisi dolor delectus totam praesentium id eligendi asperiores! Doloremque dignissimos voluptate aut incidunt! Veritatis, tempora! Sapiente vero error amet corporis! Suscipit, aperiam exercitationem? Maxime iure quo voluptatum consectetur veritatis praesentium, cum vero laudantium.</p>
                   </div>
                 </div>
@@ -346,8 +340,8 @@
   <script src="frontend/libraries/xzoom/xzoom.min.js"></script>
   <script src="frontend/scripts/main.js"></script>
   <script>
-    $(document).ready(function() {
-      
+    $(document).ready(function () {
+
       // Xzoom
       $('.xzoom, .xzoom-gallery').xzoom({
         zoomwidth: 500,
@@ -356,28 +350,42 @@
         xoffest: 15,
       });
 
+      // Rating
+      $(".btnrating").on("click", function (e) {
+        var previous_value = $("#selected_rating").val();
+
+        var selected_value = $(this).attr("data-attr");
+        $("#selected_rating").val(selected_value);
+
+        $(".selected-rating").empty();
+        $(".selected-rating").html(selected_value);
+
+        for (i = 1; i <= selected_value; ++i) {
+          $("#rating-star-" + i).toggleClass("btn-outline-warning");
+          $("#rating-star-" + i).toggleClass("btn-default");
+        }
+
+        for (ix = 1; ix <= previous_value; ++ix) {
+          $("#rating-star-" + ix).toggleClass("btn-outline-warning");
+          $("#rating-star-" + ix).toggleClass("btn-default");
+        }
+      });
+
       // Copy to clipboard
-      $(".salin").click(function(){
+      $(".salin").click(function () {
         $(".salin-link").select();
         document.execCommand("copy");
       });
 
       // Toast
-      $(".salin").click(function(){
-        $(".toast-salin").toast({delay:3000});
+      $(".salin").click(function () {
+        $(".toast-salin").toast({ delay: 3000 });
         $(".toast-salin").toast("show");
       });
-      $(".simpan").click(function(){
-        $(".toast-simpan").toast({delay:3000});
+      $(".simpan").click(function () {
+        $(".toast-simpan").toast({ delay: 3000 });
         $(".toast-simpan").toast("show");
       });
-      
-      // Auto hide
-      // window.setTimeout(function() {
-      //   $(".copySuccess").fadeTo(500, 0).slideDown(500, function() {
-      //       $(this).remove();
-      //   });
-      // }, 3000);
 
     });
   </script>

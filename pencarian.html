@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="frontend/images/favicon.png">
+  <title>Restoran - Mangan</title>
+  <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css">
+
+  <!-- My fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- End of my fonts -->
+
+  <link rel="stylesheet" href="frontend/libraries/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="frontend/styles/main.css">
+</head>
+<body>
+
+	<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand navbar-alternate" href="index.html">Mangan</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <form class="form-inline nav-search">
+          <input class="form-control ml-sm-5" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-info my-2 my-sm-0" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>        
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link mr-4" href="#">Masuk</a>
+          <a class="nav-link" href="#">Daftar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Daftar Restoran -->
+    <div class="daftar mt-3">
+      
+    </div>
+    <!-- End of daftar restoran -->
+
+  </div>
+  <!-- End of container -->
+
+  <!-- Footer -->
+  <footer class="sticky-footer bg-white py-3">
+    <div class="container-fluid">
+      <div class="row border-top justify-content-center align-items-center pt-3" >
+        <div class="col-auto text-gray-500 font-weight-light copyright">
+          Copyright © 2021 • Mangan • All rights reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End of footer -->
+
+  <script src="frontend/libraries/jquery/jquery-3.5.1.min.js"></script>
+  <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+  <script src="frontend/libraries/retina/retina.min.js"></script>
+  <script src="frontend/libraries/xzoom/xzoom.min.js"></script>
+  <script src="frontend/scripts/main.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      // Xzoom
+      $('.xzoom, .xzoom-gallery').xzoom({
+        zoomwidth: 500,
+        title: false,
+        tint: '#333',
+        xoffest: 15,
+      });
+
+      // Rating
+      $(".btnrating").on("click", function (e) {
+        var previous_value = $("#selected_rating").val();
+
+        var selected_value = $(this).attr("data-attr");
+        $("#selected_rating").val(selected_value);
+
+        $(".selected-rating").empty();
+        $(".selected-rating").html(selected_value);
+
+        for (i = 1; i <= selected_value; ++i) {
+          $("#rating-star-" + i).toggleClass("btn-outline-warning");
+          $("#rating-star-" + i).toggleClass("btn-default");
+        }
+
+        for (ix = 1; ix <= previous_value; ++ix) {
+          $("#rating-star-" + ix).toggleClass("btn-outline-warning");
+          $("#rating-star-" + ix).toggleClass("btn-default");
+        }
+      });
+
+      // Copy to clipboard
+      $(".salin").click(function () {
+        $(".salin-link").select();
+        document.execCommand("copy");
+      });
+
+      // Toast
+      $(".salin").click(function () {
+        $(".toast-salin").toast({ delay: 3000 });
+        $(".toast-salin").toast("show");
+      });
+      $(".simpan").click(function () {
+        $(".toast-simpan").toast({ delay: 3000 });
+        $(".toast-simpan").toast("show");
+      });
+
+    });
+  </script>
+</body>
+</html>

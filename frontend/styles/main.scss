@@ -12,6 +12,7 @@
     box-shadow:  1px 1px 5px rgba(0, 0, 0, 0.2);
   }
 }
+// End of navbar
 
 // Jumbotron
 .jumbotron {
@@ -41,8 +42,9 @@
     font-weight: 400;
   }
 }
+// End of jumbotron
 
-// Container
+// Menu
 .menu {
   border-radius: 120px;
   font-family: 'Assistant';
@@ -61,6 +63,7 @@
     object-fit: cover;
   }
 }
+// End of menu
 
 .favorit {
   h2 {
@@ -83,6 +86,7 @@ footer {
     font-size: 12px;
   }
 }
+// End of footer
 
 // Animation
 .h-scale {
@@ -136,6 +140,12 @@ footer {
      }
   }
 
+  .aksi {
+    .btn-outline-warning:hover {
+      color: white;
+    }
+  }
+
   .salin-link {
     width: 270px;
   }
@@ -176,6 +186,7 @@ footer {
     }
   }
 }
+// End of restaurant
 
 
 // 
@@ -203,6 +214,7 @@ footer {
     border-radius: 40px;
     color: white !important;
   }
+  // End of D_Navbar
 
   // D_Jumbotron
   .jumbotron {
@@ -227,6 +239,7 @@ footer {
       font-size: 35px;
     }
   }
+  // End of D_Jumbotron
 
   // D_Container
   .favorit {
@@ -241,6 +254,7 @@ footer {
       font-size: 20px;
     }
   }
+  // End of D_Container
 
   // D_Footer
   footer {
@@ -248,6 +262,7 @@ footer {
       font-size: 16px;
     }
   }
+  // End of D_Footer
 
   // D_Gallery
   .gallery {
@@ -264,6 +279,7 @@ footer {
       }
     }
   }
+  // End of D_Gallery
 
   // D_Restaurant
   .restaurant {
@@ -305,5 +321,6 @@ footer {
       }
     }
   }
+  // End of D_Restaurant
 
 }

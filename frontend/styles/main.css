@@ -117,6 +117,9 @@ footer .copyright {
 .restaurant .ratings .checked {
   color: orange;
 }
+.restaurant .aksi .btn-outline-warning:hover {
+  color: white;
+}
 .restaurant .salin-link {
   width: 270px;
 }

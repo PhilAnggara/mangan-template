@@ -6,23 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="frontend/images/favicon.png">
   <title>Mangan</title>
-  <link 
-    rel="stylesheet" 
-    href="frontend/libraries/bootstrap/css/bootstrap.css"
-	>
+  <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css">
 
   <!-- My fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <!-- End of my fonts -->
 
-  <link href="frontend/libraries/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="frontend/libraries/fontawesome/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="frontend/libraries/animate/animate.css">
   <link rel="stylesheet" href="frontend/styles/main.css">
+  <style type="text/css">
+    body {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
 
@@ -46,11 +46,11 @@
   <!-- Jumbotron -->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Mangan</h1>
-      <p class="lead">Temukan makanan & minuman terbaik di Manado</p>
-      <div class="row justify-content-center">
+      <h1 class="display-4 ztext animate__animated animate__fadeInUp animate__fast">Mangan</h1>
+      <p class="lead animate__animated animate__fadeInUp">Temukan makanan & minuman terbaik di Manado</p>
+      <div class="row justify-content-center animate__animated animate__fadeInUp">
         <form class="form-inline">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" autofocus>
           <button class="btn btn-info my-2 my-sm-0" type="submit">
             <i class="fas fa-search"></i>
           </button>
@@ -66,7 +66,7 @@
     <!-- Main -->
     <div class="row">
       <div class="col-sm-6 menu mt-3">
-        <div class="card shadow h-scale">
+        <div class="card shadow h-scale animate__animated animate__fadeIn">
           <img src="frontend/images/menu-1.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Pergi Makan</h5>
@@ -76,7 +76,7 @@
         </div>
       </div>
       <div class="col-sm-6 menu mt-3">
-        <div class="card shadow h-scale">
+        <div class="card shadow h-scale animate__animated animate__fadeIn animate__dua">
           <img src="frontend/images/menu-2.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Nightlife Restoran</h5>
@@ -91,7 +91,7 @@
     <!-- Favorit -->
     <section class="favorit py-5">
       <div class="row justify-content-center mt-4">
-        <h2>Restoran favorit di <span>Manado</span></h2>
+        <h2>Restoran favorit di <span class="ztext">Manado</span></h2>
       </div>
       <div class="row mt-3">
         <div class="col-sm-4 mt-4">
@@ -237,7 +237,7 @@
   <!-- End of container -->
 
   <!-- Footer -->
-  <footer class="sticky-footer bg-white py-3">
+  <footer class="sticky-footer bg-white mt-5 pb-3">
     <div class="container-fluid">
       <div class="row border-top justify-content-center align-items-center pt-3" >
         <div class="col-auto text-gray-500 font-weight-light copyright">
@@ -251,5 +251,16 @@
   <script src="frontend/libraries/jquery/jquery-3.5.1.min.js"></script>
   <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
   <script src="frontend/libraries/retina/retina.min.js"></script>
+  <script src="frontend/libraries/ztext/ztext.min.js"></script>
+  <script>
+    var ztxt = new Ztextify(".ztext", {
+      depth: "20px",
+      layers: 10,
+      fade: true,
+      direction: "forwards",
+      event: "pointer",
+      eventRotation: "20deg"
+    });
+  </script>
 </body>
 </html>

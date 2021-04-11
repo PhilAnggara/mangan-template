@@ -1,6 +1,10 @@
 .navbar-brand {
-  font-family: "Viga";
+  font-family: "Viga", sans-serif;
   font-size: 32px;
+}
+
+.navbar-alternate {
+  color: #17a2b8 !important;
 }
 
 .nav-search input {
@@ -22,13 +26,13 @@
   width: 250px !important;
 }
 .jumbotron .display-4 {
-  font-family: "Lobster";
+  font-family: "Lobster", serif;
   color: white;
   margin-top: 30px;
   font-size: 60px;
 }
 .jumbotron .lead {
-  font-family: "Assistant";
+  font-family: "Assistant", sans-serif;
   color: white;
   margin-top: 10px;
   font-size: 25px;
@@ -37,7 +41,7 @@
 
 .menu {
   border-radius: 120px;
-  font-family: "Assistant";
+  font-family: "Assistant", sans-serif;
 }
 .menu h5 {
   font-weight: 600;
@@ -66,19 +70,10 @@
 }
 
 footer {
-  font-family: "Assistant";
+  font-family: "Assistant", sans-serif;
 }
 footer .copyright {
   font-size: 12px;
-}
-
-.h-scale {
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow;
-}
-
-.h-scale:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
 .gallery .xzoom-container {
@@ -156,6 +151,61 @@ footer .copyright {
   color: #444444;
 }
 
+.daftar h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.daftar h4 {
+  font-size: 18px;
+}
+.daftar h3 {
+  font-size: 24px;
+}
+.daftar a {
+  text-decoration: none;
+  color: black;
+}
+.daftar img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.daftar .map {
+  width: 220px;
+}
+.daftar .ratings i {
+  font-size: 14px;
+}
+.daftar .ratings .product-rating {
+  font-size: 16px;
+  font-weight: 500;
+}
+.daftar .ratings .pengulas {
+  font-size: 14px;
+  font-weight: 500;
+  color: #363636;
+}
+.daftar .ratings .checked {
+  color: orange;
+}
+.daftar .ratings .alamat {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.h-scale {
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow;
+}
+
+.h-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.animate__dua {
+  --animate-delay: 5s;
+}
+
 @media (min-width: 992px) {
   .navbar-brand {
     color: white !important;
@@ -163,7 +213,8 @@ footer .copyright {
   }
 
   .navbar-alternate {
-    color: black !important;
+    color: #17a2b8 !important;
+    text-shadow: none;
   }
 
   .nav-link {

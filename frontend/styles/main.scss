@@ -1,7 +1,10 @@
 // Navbar
 .navbar-brand {
-  font-family: 'Viga';
+  font-family: 'Viga', sans-serif;
   font-size: 32px;
+}
+.navbar-alternate {
+  color: #17a2b8 !important;
 }
 .nav-search {
   input {
@@ -29,13 +32,13 @@
   }
 
   .display-4 {
-    font-family: 'Lobster';
+    font-family: 'Lobster', serif;
     color: white;
     margin-top: 30px;
     font-size: 60px;
   }
   .lead {
-    font-family: 'Assistant';
+    font-family: 'Assistant', sans-serif;
     color: white;
     margin-top: 10px;
     font-size: 25px;
@@ -47,7 +50,7 @@
 // Menu
 .menu {
   border-radius: 120px;
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
 
   h5 {
     font-weight: 600;
@@ -81,21 +84,12 @@
 
 // Footer
 footer {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   .copyright {
     font-size: 12px;
   }
 }
 // End of footer
-
-// Animation
-.h-scale {
-  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-}
-.h-scale:hover{
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
 
 // Gallery
 .gallery {
@@ -118,6 +112,7 @@ footer {
     }
   }
 }
+// End of gallery
 
 // Restaurant
 .restaurant {
@@ -188,12 +183,77 @@ footer {
 }
 // End of restaurant
 
+// Daftar
+.daftar {
+  h2 {
+    font-size: 28px;
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  img {
+    object-fit: cover;
+  }
+  .map {
+    width: 220px;
+  }
+  .ratings {
+    i {
+      font-size: 14px;
+    }
+    .product-rating {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .pengulas {
+      font-size: 14px;
+      font-weight: 500;
+      color: #363636;
+    }
+    .checked {
+      color: orange;
+    }
+    .alamat {
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 5px;
+    }
+  }
+}
+// End of daftar
+
+// Animation
+.h-scale {
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+.h-scale:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.animate__dua {
+  --animate-delay: 5s;
+}
+// End of animation
+
 
 // 
 // 
 // 
-// 
 // DESKTOP VERSION
+// DESKTOP VERSION
+// DESKTOP VERSION
+// 
+// 
+// 
 @media (min-width: 992px) {
 
   // D_Navbar
@@ -202,7 +262,8 @@ footer {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   }
   .navbar-alternate {
-    color: black !important;
+    color: #17a2b8 !important;
+    text-shadow: none;
   }
 
   .nav-link {

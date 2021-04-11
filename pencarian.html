@@ -7,7 +7,6 @@
   <link rel="shortcut icon" href="frontend/images/favicon.png">
   <title>Restoran - Mangan</title>
   <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css">
 
   <!-- My fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -16,13 +15,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <!-- End of my fonts -->
 
-  <link rel="stylesheet" href="frontend/libraries/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="frontend/libraries/fontawesome/css/all.min.css" type="text/css">
   <link rel="stylesheet" href="frontend/styles/main.css">
+  <style type="text/css">
+    body {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
 
 	<!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
     <div class="container">
       <a class="navbar-brand navbar-alternate" href="index.html">Mangan</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,20 +48,63 @@
   </nav>
   <!-- End of navbar -->
 
-  <!-- Container -->
-  <div class="container">
+  <section class="pencarian">
+    <!-- Container -->
+    <div class="container">
 
-    <!-- Daftar Restoran -->
-    <div class="daftar mt-3">
-      
+      <!-- Daftar Pencarian -->
+      <div class="daftar mt-4">
+        <h2>Restoran di Manado</h2>
+        <div class="row mt-4">
+          <div class="col-md-3 filter-col pr-md-1">
+            <div class="card mb-sm-2 mb-2">
+              <div class="card-body">
+                <h4>Filter</h4>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9 pl-sm-1">
+            <div class="card mb-2">
+              <div class="card-body py-2 pl-4">
+                <div class="row">
+                  <a href="">
+                    <img class="rounded mr-3" src="frontend/images/restaurant1.jpg" width="120" height="120">
+                  </a>
+                  <div class="d-inline mt-2">
+                    <a href="">
+                      <h3>Warung Bunda & Bar</h3>
+                    </a>
+                    <div class="ratings text-center-sm">
+                      <span>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                      </span>
+                      <span class="product-rating ml-1">4.6</span>
+                      <span class="pengulas">(135 Ulasan)</span>
+                      <p class="alamat">Kombos</p>
+                    </div>
+                  </div>
+                  <div class="d-inline mt-2 ml-5 bg-dark">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of daftar pencarian -->
+
     </div>
-    <!-- End of daftar restoran -->
-
-  </div>
-  <!-- End of container -->
+    <!-- End of container -->
+  </section>
 
   <!-- Footer -->
-  <footer class="sticky-footer bg-white py-3">
+  <footer class="sticky-footer bg-white mt-5 pb-3">
     <div class="container-fluid">
       <div class="row border-top justify-content-center align-items-center pt-3" >
         <div class="col-auto text-gray-500 font-weight-light copyright">
@@ -76,50 +123,7 @@
   <script>
     $(document).ready(function () {
 
-      // Xzoom
-      $('.xzoom, .xzoom-gallery').xzoom({
-        zoomwidth: 500,
-        title: false,
-        tint: '#333',
-        xoffest: 15,
-      });
-
-      // Rating
-      $(".btnrating").on("click", function (e) {
-        var previous_value = $("#selected_rating").val();
-
-        var selected_value = $(this).attr("data-attr");
-        $("#selected_rating").val(selected_value);
-
-        $(".selected-rating").empty();
-        $(".selected-rating").html(selected_value);
-
-        for (i = 1; i <= selected_value; ++i) {
-          $("#rating-star-" + i).toggleClass("btn-outline-warning");
-          $("#rating-star-" + i).toggleClass("btn-default");
-        }
-
-        for (ix = 1; ix <= previous_value; ++ix) {
-          $("#rating-star-" + ix).toggleClass("btn-outline-warning");
-          $("#rating-star-" + ix).toggleClass("btn-default");
-        }
-      });
-
-      // Copy to clipboard
-      $(".salin").click(function () {
-        $(".salin-link").select();
-        document.execCommand("copy");
-      });
-
-      // Toast
-      $(".salin").click(function () {
-        $(".toast-salin").toast({ delay: 3000 });
-        $(".toast-salin").toast("show");
-      });
-      $(".simpan").click(function () {
-        $(".toast-simpan").toast({ delay: 3000 });
-        $(".toast-simpan").toast("show");
-      });
+      
 
     });
   </script>

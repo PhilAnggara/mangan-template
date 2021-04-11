@@ -16,13 +16,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <!-- End of my fonts -->
 
-  <link rel="stylesheet" href="frontend/libraries/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="frontend/libraries/fontawesome/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="frontend/libraries/animate/animate.css">
   <link rel="stylesheet" href="frontend/styles/main.css">
+  <style type="text/css">
+    body {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
 
 	<!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
     <div class="container">
       <a class="navbar-brand navbar-alternate" href="index.html">Mangan</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +57,7 @@
     <div class="gallery mt-3">
       <div class="row">
         <div class="col-sm-7">
-          <div class="xzoom-container">
+          <div class="xzoom-container animate__animated animate__fadeInDown animate__faster">
             <img src="frontend/images/restaurant1.jpg" class="xzoom"
             id="xzoom-default" xoriginal="frontend/images/restaurant-1.jpg">
           </div>
@@ -59,16 +65,16 @@
         <div class="col-sm-5">
           <div class="xzoom-thumbs">
             <a href="frontend/images/restaurant-1.jpg">
-              <img src="frontend/images/restaurant1.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant1.jpg">
+              <img src="frontend/images/restaurant1.jpg" class="xzoom-gallery animate__animated animate__fadeInRight animate__faster" xpreview="frontend/images/restaurant1.jpg">
             </a>
             <a href="frontend/images/restaurant-2.jpg">
-              <img src="frontend/images/restaurant2.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant2.jpg">
+              <img src="frontend/images/restaurant2.jpg" class="xzoom-gallery animate__animated animate__fadeInRight animate__faster" xpreview="frontend/images/restaurant2.jpg">
             </a>
             <a href="frontend/images/restaurant-3.jpg">
-              <img src="frontend/images/restaurant3.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant3.jpg">
+              <img src="frontend/images/restaurant3.jpg" class="xzoom-gallery animate__animated animate__fadeInRight animate__faster" xpreview="frontend/images/restaurant3.jpg">
             </a>
             <a href="frontend/images/restaurant-4.jpg">
-              <img src="frontend/images/restaurant4.jpg" class="xzoom-gallery" xpreview="frontend/images/restaurant4.jpg">
+              <img src="frontend/images/restaurant4.jpg" class="xzoom-gallery animate__animated animate__fadeInRight animate__faster" xpreview="frontend/images/restaurant4.jpg">
             </a>
           </div>
         </div>
@@ -79,7 +85,7 @@
     <!-- Restaurant -->
     <section class="restaurant">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8 animate__animated animate__fadeInLeftBig animate__faster">
           <h2>Warung Bunda & Bar</h2>
         </div>
         
@@ -106,7 +112,7 @@
       <!-- Aksi -->
       <div class="aksi mt-3 mb-4">
         <button class="btn btn-info my-2 my-sm-0 mr-1" type="button" data-toggle="modal" data-target="#tambahUlasanModal">
-          <i class="far fa-star"></i>
+          <i class="far fa-laravel"></i>
           Tambah Ulasan
         </button>
         <!-- Modal rating-->
@@ -323,7 +329,7 @@
   <!-- End of container -->
 
   <!-- Footer -->
-  <footer class="sticky-footer bg-white py-3">
+  <footer class="sticky-footer bg-white mt-5 pb-3">
     <div class="container-fluid">
       <div class="row border-top justify-content-center align-items-center pt-3" >
         <div class="col-auto text-gray-500 font-weight-light copyright">

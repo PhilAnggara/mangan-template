@@ -1,3 +1,7 @@
+body {
+  background-color: #f0f0f0;
+}
+
 .navbar-brand {
   font-family: "Viga", sans-serif;
   font-size: 32px;
@@ -193,6 +197,66 @@ footer .copyright {
   margin-top: 5px;
 }
 
+.login {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 120px;
+}
+.login .card {
+  border-radius: 18px;
+  height: 480px;
+  padding-top: 20px;
+}
+.login .card h3 {
+  font-family: "Viga", serif;
+  color: #17a2b8;
+}
+.login .card form.log {
+  padding-top: 40px;
+}
+.login .card form.log label {
+  font-size: 14px;
+  margin: 10px 0px 0px 0px;
+}
+.login .card form.log .d-flex {
+  margin-top: 80px;
+}
+.login .card form.log .d-flex button, .login .card form.log .d-flex a {
+  width: 49%;
+}
+.login .card form.reg {
+  padding-top: 30px;
+}
+.login .card form.reg label {
+  font-size: 14px;
+  margin: 0px 0px 0px 0px;
+}
+.login .card form.reg button {
+  margin-top: 72px;
+}
+
+.register {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 120px;
+}
+.register .card {
+  border-radius: 18px;
+  height: 480px;
+  padding-top: 20px;
+}
+.register .card h3 {
+  font-family: "Viga", serif;
+  color: #17a2b8;
+}
+.register .card form.log label {
+  font-size: 14px;
+  margin: 1px 0px 0px 0px;
+}
+.register .card form.log .d-flex {
+  margin-top: 40px;
+}
+
 .h-scale {
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow;
 }
@@ -303,5 +367,9 @@ footer .copyright {
   }
   .restaurant .ulasan p {
     font-size: 14px;
+  }
+
+  .login, .register {
+    padding-top: 70px;
   }
 }/*# sourceMappingURL=main.css.map */

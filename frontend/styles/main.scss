@@ -1,3 +1,7 @@
+body {
+  background-color: #f0f0f0;
+}
+
 // Navbar
 .navbar-brand {
   font-family: 'Viga', sans-serif;
@@ -230,6 +234,71 @@ footer {
 }
 // End of daftar
 
+// Login
+.login {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 120px;
+  .card {
+    border-radius: 18px;
+    height: 480px;
+    padding-top: 20px;
+    h3 {
+      font-family: 'Viga', serif;
+      color: #17a2b8;
+    }
+    form.log {
+      padding-top: 40px;
+      label {
+        font-size: 14px;
+        margin: 10px 0px 0px 0px;
+      }
+      .d-flex {
+        margin-top: 80px;
+        button, a {
+          width: 49%;
+        }
+      }
+    }
+    form.reg {
+      padding-top: 30px;
+      label {
+        font-size: 14px;
+        margin: 0px 0px 0px 0px;
+      }
+      button {
+        margin-top: 72px;
+      }
+    }
+  }
+}
+// End of login
+// Register
+.register {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 120px;
+  .card {
+    border-radius: 18px;
+    height: 480px;
+    padding-top: 20px;
+    h3 {
+      font-family: 'Viga', serif;
+      color: #17a2b8;
+    }
+    form.log {
+      label {
+        font-size: 14px;
+        margin: 1px 0px 0px 0px;
+      }
+      .d-flex {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+// End of register
+
 // Animation
 .h-scale {
   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
@@ -383,5 +452,11 @@ footer {
     }
   }
   // End of D_Restaurant
+
+  // D_Login
+  .login, .register {
+    padding-top: 70px;
+  }
+  // End of D_Login
 
 }

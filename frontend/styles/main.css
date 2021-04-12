@@ -78,6 +78,7 @@ footer {
 }
 footer .copyright {
   font-size: 12px;
+  font-weight: 500;
 }
 
 .gallery .xzoom-container {
@@ -155,15 +156,41 @@ footer .copyright {
   color: #444444;
 }
 
+.daftar .filter-col {
+  display: none;
+}
+.daftar .filter-col .card {
+  position: sticky;
+  top: 20px;
+}
+.daftar .filter-col .card h5 {
+  font-size: 14px;
+}
+.daftar .filter-col .card .filter .form-check {
+  margin-top: 3px;
+}
+.daftar .filter-col .card .filter .form-check label {
+  font-size: 14px;
+}
+.daftar .filter-col .card .filter .form-check label:hover {
+  color: #17a2b8;
+}
+.daftar .filter-col .card .filter .form-check input:checked ~ label {
+  color: #17a2b8;
+  font-weight: 500;
+}
+.daftar .filter-col .card .filter .form-check input:checked ~ label:hover {
+  color: #17a2b8;
+}
 .daftar h2 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 400;
 }
 .daftar h4 {
   font-size: 18px;
 }
 .daftar h3 {
-  font-size: 24px;
+  font-size: 18px;
 }
 .daftar a {
   text-decoration: none;
@@ -172,19 +199,21 @@ footer .copyright {
 .daftar img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 80px;
+  height: 80px;
 }
 .daftar .map {
   width: 220px;
 }
 .daftar .ratings i {
-  font-size: 14px;
+  font-size: 10px;
 }
 .daftar .ratings .product-rating {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
 }
 .daftar .ratings .pengulas {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
   color: #363636;
 }
@@ -192,9 +221,10 @@ footer .copyright {
   color: orange;
 }
 .daftar .ratings .alamat {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .login {
@@ -319,6 +349,33 @@ footer .copyright {
   }
   .favorit h5 {
     font-size: 20px;
+  }
+
+  .daftar .filter-col {
+    display: block;
+  }
+  .daftar h2 {
+    font-size: 28px;
+  }
+  .daftar h3 {
+    font-size: 24px;
+  }
+  .daftar img {
+    width: 120px;
+    height: 120px;
+  }
+  .daftar .ratings i {
+    font-size: 14px;
+  }
+  .daftar .ratings .product-rating {
+    font-size: 16px;
+  }
+  .daftar .ratings .pengulas {
+    font-size: 14px;
+  }
+  .daftar .ratings .alamat {
+    font-size: 14px;
+    margin-top: 5px;
   }
 
   footer .copyright {

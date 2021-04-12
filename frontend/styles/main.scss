@@ -91,6 +91,7 @@ footer {
   font-family: 'Assistant', sans-serif;
   .copyright {
     font-size: 12px;
+    font-weight: 500;
   }
 }
 // End of footer
@@ -189,15 +190,44 @@ footer {
 
 // Daftar
 .daftar {
+  .filter-col {
+    display: none;
+    .card {
+      position: sticky;
+      top: 20px;
+      h5 {
+        font-size: 14px;
+      }
+      .filter {
+        .form-check {
+          margin-top: 3px;
+          label {
+            font-size: 14px;
+          }
+          label:hover {
+            color: #17a2b8;
+          }
+          input:checked ~ label {
+            color: #17a2b8;
+            font-weight: 500;
+          }
+          input:checked ~ label:hover {
+            color: #17a2b8;
+          }
+        }
+      }
+    }
+  }
+
   h2 {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 400;
   }
   h4 {
     font-size: 18px;
   }
   h3 {
-    font-size: 24px;
+    font-size: 18px;
   }
   a {
     text-decoration: none;
@@ -205,20 +235,22 @@ footer {
   }
   img {
     object-fit: cover;
+    width: 80px;
+    height: 80px;
   }
   .map {
     width: 220px;
   }
   .ratings {
     i {
-      font-size: 14px;
+      font-size: 10px;
     }
     .product-rating {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 500;
     }
     .pengulas {
-      font-size: 14px;
+      font-size: 10px;
       font-weight: 500;
       color: #363636;
     }
@@ -226,9 +258,10 @@ footer {
       color: orange;
     }
     .alamat {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 700;
       margin-top: 5px;
+      margin-bottom: 0;
     }
   }
 }
@@ -332,6 +365,7 @@ footer {
   }
   .navbar-alternate {
     color: #17a2b8 !important;
+    // color: #007BFF !important;
     text-shadow: none;
   }
 
@@ -385,6 +419,39 @@ footer {
     }
   }
   // End of D_Container
+
+  // D_Daftar
+  .daftar {
+    .filter-col {
+      display: block;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+    }
+    .ratings {
+      i {
+        font-size: 14px;
+      }
+      .product-rating {
+        font-size: 16px;
+      }
+      .pengulas {
+        font-size: 14px;
+      }
+      .alamat {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    }
+  }
+  // End of D_Daftar
 
   // D_Footer
   footer {
